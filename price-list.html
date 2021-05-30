@@ -9,6 +9,15 @@
       function toBottom() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
       }
+      function showMess() {
+        var val = document.getElementById('mail-check');
+        if (val.value == '') {
+            window.alert('Bạn chưa nhập email!');
+        }
+        else {
+            window.alert('Cảm ơn bạn đã đăng kí, mọi thông tin mới nhất về sản phẩm sẽ được gửi về email của bạn! ♥♥');
+        }
+      }
     </script>
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="css/core-style.css">
@@ -74,8 +83,8 @@
             </nav>
             <!-- Button Group -->
             <div class="amado-btn-group mt-30 mb-100">
-                <a href="#" class="btn amado-btn mb-15">%Khuyến mãi%</a>
-                <a href="#" class="btn amado-btn active">Sản phẩm mới</a>
+                <a href="product.html" class="btn amado-btn mb-15">%Khuyến mãi%</a>
+                <a href="product.html" class="btn amado-btn active">Sản phẩm mới</a>
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
@@ -293,15 +302,15 @@
                 <div class="col-12 col-lg-6 col-xl-7">
                     <div class="newsletter-text mb-100">
                         <h2>Đăng ký để có cơ hội <span> giảm giá 25%</span></h2>
-                        <p>Tất cả việc bạn cần làm là điền email, bấm nút đăng ký và .. Bùm, giảm giá liền!!</p>
+                        <p>Tất cả việc bạn cần làm là điền email, bấm nút đăng ký để nhận những thông tin mới về sản phẩm và giảm giá cũng như những tin tức mới nhất từ shop!!</p>
                     </div>
                 </div>
                 <!-- Newsletter Form -->
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div class="newsletter-form mb-100">
                         <form action="#" method="post">
-                            <input type="email" name="email" class="nl-email" placeholder="Điền E-mail dzô">
-                            <input type="submit" value="Đăng ký">
+                            <input id="mail-check" type="email" name="email" class="nl-email" placeholder="Điền E-mail dzô">
+                            <input type="submit" onclick="showMess()" value="Đăng ký">
                         </form>
                     </div>
                 </div>
@@ -311,57 +320,70 @@
     <!-- ##### Newsletter Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Single Widget Area -->
-                <div class="col-12 col-lg-4">
-                    <div class="single_widget_area">
-                        <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a href="index.html"><img src="img/core-img/logo_2.png" alt=""></a>
-                        </div>
-                        <!-- Copywrite Text -->
-                        <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Tiuh Corp 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-                    </div>
-                </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-lg-8">
-                    <div class="single_widget_area">
-                        <!-- Footer Menu -->
-                        <div class="footer_menu">
-                            <nav class="navbar navbar-expand-lg justify-content-end">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                <div class="collapse navbar-collapse" id="footerNavContent">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Trang chủ</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="intro.html">Giới thiệu</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="product.html">Sản phẩm</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="price-list.html">Bảng giá</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+  <footer class="footer_area clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+              <div class="single_widget_area">
+                  <!-- Logo -->
+                  <div class="footer-logo mr-50">
+                      <a href="index.html"><img src="img/core-img/logo_2.png" alt=""></a>
+                  </div>
+                  <!-- Copywrite Text -->
+                  <p class="copywrite">
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      Copyright &copy;
+                      <script>
+                          document.write(new Date().getFullYear());
+                      </script> All rights reserved | Tiuh Corp
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  </p>
+              </div>
             </div>
-        </div>
-    </footer>
-    <!-- ##### Footer Area End ##### -->
+            <div class="col-md-3">
+            <div class="row">
+              <h5 style="color: white;">Truy cập</h5>
+            </div>
+            <div class="row mb-4">
+            <div class="underline bg-light" style="width: 50px;"></div>
+            </div>
+  
+                <p><i class="fa fa-chevron-right" aria-hidden="true"></i> <a style="color:#777; font-size:100%;" href="index.html">Trang chủ</a></p>
+                <p><i class="fa fa-chevron-right" aria-hidden="true"></i> <a style="color:#777; font-size:100%;" href="intro.html">Giới thiệu</a></p>
+                <p><i class="fa fa-chevron-right" aria-hidden="true"></i> <a style="color:#777; font-size:100%;" href="product.html">Sản phẩm</a></p>
+                <p><i class="fa fa-chevron-right" aria-hidden="true"></i> <a style="color:#777; font-size:100%;" href="price-list.html">Bảng giá</a></p>
+                <p><i class="fa fa-chevron-right" aria-hidden="true"></i> <a style="color:#777; font-size:100%;" href="contact.html">Liên hệ</a></p>
+  
+            </div>
+  
+            <div class="col-md-3 pl-4">
+              <div class="row">
+              <h5 style="color: white;">Liên hệ</h5>
+            </div>
+            <div class="row mb-4">
+            <div class="underline bg-light" style="width: 50px;"></div>
+            </div>
+            <div class="row">
+              <p style="color: white;"><span style="color:#777" class="fa fa-map-marker"></span> &nbsp;TIUH - Số xx, phường XX, Quận XX, TP.HCM</p>
+              <p style="color: white;"><span style="color:#777" class="fa fa-phone"></span> &nbsp;Hotline: 1800.xxxx (miễn phí)</p>
+              <p style="color: white;">Zalo bán lẻ: xxxxxxxxxx</p>
+              <p style="color: white;">Zalo bán sỉ: xxxxxxxxxx</p>
+            </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="row">
+              <h5 style="color: white;">Tags</h5>
+            </div>
+            <div class="row mb-4">
+            <div class="underline bg-light" style="width: 50px;"></div>
+            </div>
+            <button class="btn btn-outline-light">Sách</button> <button class="btn btn-outline-light">Truyện tranh</button> <button class="btn btn-outline-light">MBTL</button> <button class="btn btn-outline-light">Sale</button> <button class="btn btn-outline-light">Kim Đồng</button>
+            </div>
+          </div>
+    </div>
+  </footer>
+  <!-- ##### Footer Area End ##### -->
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
