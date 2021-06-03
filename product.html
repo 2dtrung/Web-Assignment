@@ -35,9 +35,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="search-content">
-                        <form action="#" method="get">
+                        <form action="search.php" method="get">
                             <input type="search" name="search" id="search" placeholder="Gõ từ khoá....">
-                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
+                            <button type="submit" name="ok"><img src="img/core-img/search.png" alt=""></button>
                         </form>
                     </div>
                 </div>
@@ -114,11 +114,11 @@
                     <ul>
                         <li class="active"><a href="intro.html">Kinh dị</a></li>
                         <li><a href="comedy.html">Chuyện hài</a></li>
-                        <li><a href="novel.html">Tiểu thuyết</a></li>
-                        <li><a href="#">Thơ ca</a></li>
-                        <li><a href="#">Khoa học</a></li>
+                        <li><a href="search.php?search=novel&ok=search">Tiểu thuyết</a></li>
+                        <li><a href="search.php?search=fiction&ok=search">Giả tưởng</a></li>
+                        <li><a href="search.php?search=tech&ok=search">Khoa học</a></li>
                         <li><a href="#">Thám tử</a></li>
-                        <li><a href="#">Người lớn</a></li>
+                        <li><a href="search.php?search=life&ok=search">Người lớn</a></li>
                     </ul>
                 </div>
             </div>
@@ -560,6 +560,8 @@
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <!-- enter form -->
+    <script src="js/enterform.js"></script>
 
 </body>
 
